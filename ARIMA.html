@@ -1,0 +1,35 @@
+<section id="project-overview">
+  <h2>Project: ARIMA and LSTM for Streamflow Time Series Forecasting</h2>
+  <p><strong>Overview:</strong> This project focuses on forecasting reservoir inflows using historical streamflow data. We employed statistical and machine learning models to improve the accuracy of inflow prediction essential for hydropower resource management.</p>
+
+  <h3>Models Implemented:</h3>
+  <ul>
+    <li><strong>ARIMA</strong> (Autoregressive Integrated Moving Average)</li>
+    <li><strong>SARIMA</strong> (Seasonal ARIMA)</li>
+    <li><strong>Bidirectional LSTM</strong> (Long Short-Term Memory)</li>
+  </ul>
+
+  <h3>Data Understanding:</h3>
+  <p>We worked with monthly inflow data (in MCM). The time series was decomposed into:</p>
+  <ul>
+    <li><strong>Original:</strong> Raw streamflow data</li>
+    <li><strong>Trend:</strong> Long-term pattern</li>
+    <li><strong>Seasonality:</strong> Recurring annual patterns</li>
+    <li><strong>Residuals:</strong> Irregular fluctuations</li>
+  </ul>
+
+  <h3>ARIMA Model:</h3>
+  <p>A statistical model requiring stationary data. The final parameters were (p, d, q) = (1, 0, 1).<br>
+  <strong>Performance:</strong> R-Squared = 0.29, RMSE = 195.19</p>
+
+  <h3>SARIMA Model:</h3>
+  <p>Enhanced version of ARIMA accounting for seasonality.<br>
+  <strong>Performance:</strong> R-Squared = 0.4955, RMSE = 268.61</p>
+
+  <h3>LSTM (Bidirectional):</h3>
+  <p>A deep learning model that captures long-term dependencies effectively.<br>
+  <strong>Performance:</strong> R-Squared = 0.8386</p>
+
+  <h3>Conclusion:</h3>
+  <p>While SARIMA improved over ARIMA due to seasonal adjustments, Bidirectional LSTM provided the highest accuracy in forecasting. Its ability to model complex time series makes it the most reliable choice for future reservoir inflow predictions.</p>
+</section>
